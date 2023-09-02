@@ -1,0 +1,12 @@
+<div>
+<label for="id1" class="form-label">child component</label>
+<div class="  input-group mb-3">
+        <input type="text" class="form-control" id="id1" placeholder="" [(ngModel)]="childMessage">
+        <button class="btn btn-outline-secondary" id="button" (click)="dataSendToParent()">Send</button>
+
+</div>
+
+</div>
+<div class="mb-3">
+  <p>Data Recived from Parent Component: {{dataReceivedFromParentComp}}</p>
+</div>

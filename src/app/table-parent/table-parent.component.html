@@ -1,0 +1,28 @@
+<div class="container mt-4">
+    <table class="table" [ngClass]="{'table-secondary':flag}">
+        <thead>
+          <tr>
+            <th scope="col">Product Id</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Product Price</th>
+            <th scope="col">Action</th>
+
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of productList;let i=index">
+                <td>{{product.productId}}</td>
+                <td>{{product.productName}}</td>
+                <td>{{product.productPrice}}</td>
+                <td><button (click)="deleteProduct(i)">Delete</button>
+                <button (click)="editProduct(i)">Edit</button></td>
+            </tr>
+        </tbody>
+    </table>
+    
+   
+    <app-table-child (sendData)="reciveData($event)" [reciveData]="productObj" ></app-table-child>
+
+</div>
+
+

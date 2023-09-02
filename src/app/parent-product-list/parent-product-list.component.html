@@ -1,0 +1,31 @@
+<p>table-task works!</p>
+<div class="container mt-2" >
+    <div class="row">
+        <div class="col-md-6 border shadow">
+  <table class="table table-success table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Product Id</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Product Price</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let val of productList;let i=index">
+        <td>{{ val.productId }}</td>
+        <td>{{ val.productName }}</td>
+        <td>{{ val.price }}</td>
+        <td>
+            <button class="btn btn-secondary btn-sm mt-3" (click)="deleteProduct(val.productId)">Delete</button>
+            <!-- <button class="btn btn-secondary btn-sm mt-3" (click)="editProduct()">Edit</button> -->
+        </td>
+    </tr>
+    </tbody>
+  </table>
+  </div>
+  
+<div class="col-md-6 border shadow" >
+    <app-child-product (sendData)="reciveFunction($event)"></app-child-product>
+</div>
+</div>

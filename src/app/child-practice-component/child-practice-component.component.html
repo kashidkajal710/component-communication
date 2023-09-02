@@ -1,0 +1,12 @@
+
+<div class="mt-3">
+    <div class="col-mb-6">
+        <label for="id1" class="form-label">Name</label>
+        <input type="text" class="form-control" id="id1" [(ngModel)]="sendDataToChild.name" />
+      </div>
+      <div class="col-mb-6 ageclass">
+        <label for="id2" class="form-label">Age</label>
+        <input type="text" class="form-control" id="id2" [(ngModel)]="sendDataToChild.age" />
+      </div>
+      <button  type="button"  class="btn btn-secondary mt-2" (click)="addDetails()" >Add Student</button>
+</div>

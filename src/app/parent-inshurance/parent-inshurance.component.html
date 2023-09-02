@@ -1,0 +1,30 @@
+<p>parent-inshurance works!</p>
+<div>
+  <app-inshurance-typechild (sendInshuranceType)="getInshuranceType($event)" [list]="count" [dataRecivedFromParent]="totalCount"></app-inshurance-typechild>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-bordered text-center">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Inshurance Holder Name</th>
+            <th>Package</th>
+            <th>preimum Amount</th>
+            <th>claim</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let val of inshuranceData;let i=index">
+            <td>{{i+1}}</td>
+            <td>{{val.inshuranceHolderName}}</td>
+            <td>{{val.package}}</td>
+            <td>{{val.preimum}}</td>
+            <td>{{val.claim}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>

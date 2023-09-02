@@ -1,0 +1,10 @@
+<div class="container shadow w-70 mt-5">
+    <div>Student Info</div>
+    <ul *ngFor="let student of studentDetails">
+        <li> {{student.name}}</li>
+        <li>{{student.age}}</li>
+    </ul>
+  
+
+    <app-child-practice-component [sendDataToChild]="studentObj"  (sendData)="reciveData($event)"></app-child-practice-component>
+</div>
